@@ -8,7 +8,6 @@ edition = "2021"
 [dependencies]
 deno_bindgen = "0.8.1"
 fast_qr = { version = "0.9.0", features = ["svg"] }
-qrcode-generator = "4.1.8"
 serde = { version = "1.0.183", features = ["derive"] }
 
 [lib]
