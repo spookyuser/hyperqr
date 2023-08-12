@@ -30,10 +30,10 @@ jobs:
           override: true
 
       - name: Install deno-codegen
-        run: deno install --allow-read --allow-write --allow-run --allow-net --allow-env --unstable --force --root ./.deno_plugins --name deno-codegen https://deno.land/x/deno_codegen/cli.ts
+        run: deno install -Afrq -n deno_bindgen https://deno.land/x/deno_bindgen/cli.ts
 
       - name: Build ffi libraries
-        run: cd ./qrlib && cargo build --release
+        run: cd ./qrlib && cargo build --release && deno_bindgen .
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
