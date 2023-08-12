@@ -8,7 +8,7 @@ export const config = {
 const app = new Hono();
 
 import QRCode from "qrcode";
-// With async/await
+
 const generateQR = async (data: string) => {
   try {
     return QRCode.toString(data, { type: "svg" });
@@ -16,7 +16,6 @@ const generateQR = async (data: string) => {
     console.error(err);
   }
 };
-// With promises
 
 const htmlqr = (qrsvg: string) => `
 <!DOCTYPE html>
@@ -44,7 +43,6 @@ const htmlqr = (qrsvg: string) => `
 app.get("*", async (c) => {
   let data = c.req.path.substring(1);
   const qr = await generateQR(data);
-  console.log(data);
 
   if (qr) {
     return c.html(htmlqr(qr));
