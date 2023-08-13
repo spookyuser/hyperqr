@@ -1,0 +1,12 @@
+{
+  "name": "qrlib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf pkg && wasm-pack build --target web --weak-refs --release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

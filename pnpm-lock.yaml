@@ -11,6 +11,9 @@ dependencies:
   qrcode:
     specifier: ^1.5.3
     version: 1.5.3
+  qrlib:
+    specifier: file:./qrlib/pkg/
+    version: file:qrlib/pkg
 
 devDependencies:
   '@types/qrcode':
@@ -6658,3 +6661,8 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
+
+  file:qrlib/pkg:
+    resolution: {directory: qrlib/pkg, type: directory}
+    name: qrlib
+    dev: false
