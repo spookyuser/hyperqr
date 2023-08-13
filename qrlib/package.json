@@ -2,7 +2,7 @@
   "name": "qrlib",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "if [ -n \"$VERCEL\" ]; pnpm install -g wasm-pack | sh; fi",
+    "preinstall": "if [ -n \"$VERCEL\" ]; then pnpm install -g wasm-pack; fi",
     "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release",
     "postinstall": "pnpm run build"
   },
