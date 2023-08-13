@@ -2,7 +2,7 @@
   "name": "qrlib",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "pnpm install -g wasm-pack",
+    "preinstall": "command -v wasm-pack || pnpm install -g wasm-pack",
     "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release",
     "postinstall": "pnpm run build"
   },
