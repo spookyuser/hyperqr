@@ -1,14 +1,13 @@
 {
   "scripts": {
     "start": "vercel dev",
-    "deploy": "vercel"
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "hono": "^3.4.1",
     "qrlib": "workspace:^"
   },
   "devDependencies": {
-    "next": "^13.4.13",
     "vercel": "^29.1.1"
   }
 }

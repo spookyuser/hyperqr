@@ -1,0 +1,14 @@
+{
+  "name": "qrlib",
+  "version": "0.1.0",
+  "files": [
+    "qrlib_bg.wasm",
+    "qrlib.js",
+    "qrlib.d.ts"
+  ],
+  "module": "qrlib.js",
+  "types": "qrlib.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

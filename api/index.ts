@@ -1,8 +1,9 @@
 //@ts-ignore
-import wasm from "qrlib/pkg/qrlib_bg.wasm?module";
+import wasm from "qrlib/qrlib_bg.wasm?module";
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
-import init, { qrsvg } from "qrlib/pkg/qrlib";
+import init, { qrsvg } from "qrlib";
+
 export const config = {
   runtime: "edge",
 };
