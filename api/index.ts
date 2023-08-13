@@ -16,30 +16,7 @@ const initializeWasm = async () => {
   }
 };
 
-const htmlqr = (qrsvg: string) => `
-<!DOCTYPE html>
- <html>
-    <head>
-      <title>QR Code Generator</title>
-      <style>
-        body {
-          display: flex;
-          justify-content: center; 
-          align-items: center;     
-          margin: 0;               
-        }
-        svg {
-          max-width: 80vh;
-        }
-      </style>
-    </head>
-    <body>
-      ${qrsvg}
-    </body>
-  </html>
-`;
-
-app.get("/svg/*", async (c) => {
+app.get("*", async (c) => {
   let data = c.req.path.substring(1);
   await initializeWasm();
   const qr = qr_svg(data, new SvgOptions().shape(Shape.Square));
@@ -48,16 +25,6 @@ app.get("/svg/*", async (c) => {
     return c.text(qr);
   }
   return c.text("Error");
-});
-
-app.get("*", async (c) => {
-  let data = c.req.path.substring(1);
-  await initializeWasm();
-  const qr = qr_svg(data, new SvgOptions().shape(Shape.Square));
-  if (qr) {
-    return c.html(htmlqr(qr));
-  }
-  return c.html("Error");
 });
 
 export default handle(app);
