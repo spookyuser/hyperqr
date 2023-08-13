@@ -15,6 +15,7 @@ if [ -n "$VERCEL" ]; then
     fi
 
     echo "Updating all installed packages..."
+    cargo install cargo-update
     cargo install-update -a
 
 fi
