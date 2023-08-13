@@ -2,7 +2,7 @@
   "name": "qrlib",
   "version": "1.0.0",
   "scripts": {
-    "install": "pnpm run build",
+    "preinstall": "./install.sh",
     "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release"
   },
   "keywords": [],

@@ -6,4 +6,3 @@ source $HOME/.cargo/env
 cargo install wasm-pack 
 rustup install stable
 rustup target add wasm32-unknown-unknown
-pnpm install
