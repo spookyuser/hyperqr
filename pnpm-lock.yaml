@@ -8,12 +8,12 @@ importers:
 
   .:
     dependencies:
+      fast_qr:
+        specifier: ^0.9.0
+        version: 0.9.0
       hono:
         specifier: ^3.4.1
         version: 3.4.1
-      qrlib:
-        specifier: workspace:^
-        version: link:wasm/pkg
     devDependencies:
       vercel:
         specifier: ^29.1.1
@@ -3543,6 +3543,10 @@ packages:
   /fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
+
+  /fast_qr@0.9.0:
+    resolution: {integrity: sha512-kHDOgZ+7qRw95tWYUPsVGjbQDrPokqSkCkpiUYSt3PUtngoZ70E39pWyfXYaG3YyDWSP2VgMZphC05xtu/s8Pg==}
+    dev: false
 
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}

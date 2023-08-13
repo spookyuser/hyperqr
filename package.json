@@ -4,8 +4,8 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "hono": "^3.4.1",
-    "qrlib": "workspace:^"
+    "fast_qr": "^0.9.0",
+    "hono": "^3.4.1"
   },
   "devDependencies": {
     "vercel": "^29.1.1"
