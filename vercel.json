@@ -6,5 +6,5 @@
             "destination": "/api"
         }
     ],
-    "installCommand": "sh ./qrlib/install.sh && pnpm install"
+    "buildCommand": "sh ./qrlib/install.sh"
 }
