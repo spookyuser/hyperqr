@@ -2,24 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick QR</title>
+    <style>
+      html,
+      body {
+        font-family: monospace;
+      }
+    </style>
   </head>
   <body>
     <h3>u can put whatever u want after the /</h3>
     <h4>and get a qr code back :)</h4>
-
-    <!-- For example -->
-    <li>
-      <a
-        href="https://quick-qr.herokuapp.com/https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      >
-        https://quick-qr.herokuapp.com/https://www.youtube.com/watch?v=dQw4w9WgXcQ
-      </a>
-    </li>
+    <h4>examples:</h4>
   </body>
+  <script>
+    const hostname = window.location.host;
+    const ul = document.createElement("ul");
+    const examples = [
+      "google.com",
+      "yahoo.com",
+      "wowwhatalongpassword28dbns2",
+      "https://www.youtube.com/watch?v=O71664NdKmM",
+    ];
+    examples.forEach((example) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `http://${hostname}/${example}`;
+      a.innerText = a.href;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    document.body.appendChild(ul);
+  </script>
 </html>
