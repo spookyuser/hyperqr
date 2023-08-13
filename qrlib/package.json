@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "preinstall": "./install.sh",
-    "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release"
+    "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release",
+    "postinstall": "pnpm run build"
   },
   "keywords": [],
   "author": "",
