@@ -2,38 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick QR</title>
-    <style>
-      html,
-      body {
-        font-family: monospace;
-      }
-    </style>
   </head>
-  <body>
+  <template id="row">
+    <tr>
+      <td colspan="2">
+        <a href=""></a>
+      </td>
+    </tr>
+  </template>
+  <body class="container">
     <h3>u can put whatever u want after the /</h3>
     <h4>and get a qr code back :)</h4>
     <h4>examples:</h4>
+    <table
+      class="container"
+      style="text-align: left; font-family: monospace; font-size: 1rem"
+    ></table>
   </body>
   <script>
     const hostname = window.location.host;
-    const ul = document.createElement("ul");
+    const table = document.querySelector("table");
+    const tbody = document.createElement("tbody");
     const examples = [
-      "google.com",
-      "yahoo.com",
       "wowwhatalongpassword28dbns2",
       "https://www.youtube.com/watch?v=O71664NdKmM",
     ];
+
     examples.forEach((example) => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = `http://${hostname}/${example}`;
-      a.innerText = a.href;
-      li.appendChild(a);
-      ul.appendChild(li);
+      const template = document.querySelector("#row");
+      const newRow = template.content.cloneNode(true);
+      const link = newRow.querySelector("a");
+      link.href = `https://${hostname}/${example}`;
+      link.innerText = `https://${hostname}/${example}`;
+      tbody.appendChild(newRow);
     });
-    document.body.appendChild(ul);
+    table.appendChild(tbody);
   </script>
 </html>
