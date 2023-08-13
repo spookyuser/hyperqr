@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf pkg && wasm-pack build --target web --weak-refs --release"
+    "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release"
   },
   "keywords": [],
   "author": "",

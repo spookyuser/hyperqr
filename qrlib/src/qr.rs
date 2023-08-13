@@ -7,7 +7,6 @@ pub fn qrsvg(data: &str) -> String {
     // QRBuilder::new can fail if content is too big for version,
     // please check before unwrapping.
     let qrcode = QRBuilder::new(data).build().unwrap();
-
     let _svg = SvgBuilder::default().shape(Shape::Square).to_str(&qrcode);
     _svg
 }
