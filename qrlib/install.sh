@@ -5,6 +5,7 @@ if [ -n "$VERCEL" ]; then
     if ! command -v rustup &>/dev/null; then
         echo "Rustup is not installed. Installing Rustup..."
         curl https://sh.rustup.rs -sSf | sh -s -- -y
+        source "$HOME/.cargo/env"
         rustup target add wasm32-unknown-unknown
     fi
 
