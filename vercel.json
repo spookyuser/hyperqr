@@ -5,6 +5,5 @@
             "source": "/(.*)",
             "destination": "/api"
         }
-    ],
-    "buildCommand": "sh ./qrlib/install.sh"
+    ]
 }
