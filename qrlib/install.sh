@@ -4,7 +4,7 @@ if [ -n "$VERCEL" ]; then
 
     if ! command -v rustup &>/dev/null; then
         echo "Rustup is not installed. Installing Rustup..."
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+        curl https://sh.rustup.rs -sSf | sh -s -- -y
         rustup target add wasm32-unknown-unknown
     fi
 
