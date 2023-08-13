@@ -1,8 +1,7 @@
 {
   "scripts": {
     "start": "vercel dev",
-    "deploy": "vercel",
-    "install": "./qrlib/install.sh"
+    "deploy": "vercel"
   },
   "dependencies": {
     "hono": "^3.4.1",
