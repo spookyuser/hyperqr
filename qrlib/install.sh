@@ -15,8 +15,4 @@ if [ -n "$VERCEL" ]; then
         source "$HOME/.cargo/env"
     fi
 
-    echo "Updating all installed packages..."
-    cargo install cargo-update
-    cargo install-update -a
-
 fi

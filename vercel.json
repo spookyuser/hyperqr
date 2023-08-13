@@ -1,8 +1,10 @@
 {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
     "rewrites": [
         {
             "source": "/(.*)",
             "destination": "/api"
         }
-    ]
+    ],
+    "installCommand": "./qrlib/install.sh && pnpm install"
 }
