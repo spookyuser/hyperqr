@@ -2,7 +2,7 @@
   "name": "qrlib",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "command -v wasm-pack || pnpm install -g wasm-pack",
+    "preinstall": "if [ -n \"$VERCEL\" ]; then curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh; fi",
     "build": "test -d pkg && rm -rf pkg; wasm-pack build --target web --weak-refs --release",
     "postinstall": "pnpm run build"
   },
