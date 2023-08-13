@@ -12,6 +12,7 @@ if [ -n "$VERCEL" ]; then
     if ! command -v wasm-pack &>/dev/null; then
         echo "wasm-pack is not installed. Installing wasm-pack..."
         curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -f
+        source "$HOME/.cargo/env"
     fi
 
     echo "Updating all installed packages..."
