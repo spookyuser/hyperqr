@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
+      integrity="sha512-TktJbycEG5Van9KvrSHFUcYOKBroD7QCYkEe73HAutODCw9QTFcvF6fuxioYM1h6THNudK1GjVidazj6EslK4A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quick QR</title>
   </head>
@@ -14,6 +21,14 @@
     </tr>
   </template>
   <body class="container">
+    <a
+      class="github-fork-ribbon"
+      href="https://github.com/spookyuser/quickqr"
+      data-ribbon="Fork me on GitHub"
+      title="Fork me on GitHub"
+    >
+      Fork me on GitHub
+    </a>
     <h3>u can put whatever u want after the /</h3>
     <h4>and get a qr code back :)</h4>
     <h4>examples:</h4>
@@ -22,6 +37,13 @@
       style="text-align: left; font-family: monospace; font-size: 1rem"
     ></table>
   </body>
+  <footer style="position: absolute; bottom: 0">
+    <span>
+      Thanks to
+      <a href="https://html.energy">html.energy</a>
+      for the css!
+    </span>
+  </footer>
   <script>
     const hostname = window.location.host;
     const table = document.querySelector("table");

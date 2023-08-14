@@ -1,3 +1,4 @@
+/* From html.energy */
 .container {
   max-width: 740px;
   margin: 1em auto;
@@ -88,4 +89,12 @@ a {
 }
 a:hover {
   color: #0000ff;
+}
+
+footer {
+  animation: breathing 60s ease-in-out infinite;
+}
+html {
+  background-color: #eaeaea;
+  color: #313639;
 }
