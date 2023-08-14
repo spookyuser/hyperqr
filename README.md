@@ -1,4 +1,4 @@
-# hyperqr.xyz
+# [hyperqr.xyz](https://hyperqr.xyz)
 
 This is a simple website where you can get back a .svg with whatever you put after the / in the url. 
 
@@ -19,10 +19,10 @@ Error: The Edge Function "api/index" is referencing unsupported modules:
 ## Cool things
 You can kinda use this like unsplash used to work too so if i have some text and want to get a qr code anywhere in markdown or html or whatevs I can just do
 
-`![qr code for this page](https://hyperqr.xyz/github.com)`
+`![qr code for this page](https://hyperqr.xyz/https://github.com/spookyuser/hyperqr)`
 
 and you get:
 
-![qr code for this page](https://hyperqr.xyz/github.com)
+![qr code for this page](https://hyperqr.xyz/https://github.com/spookyuser/hyperqr)
 
 

@@ -2,6 +2,7 @@
 import wasm from "fast_qr/fast_qr_bg.wasm?module";
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
+
 import init, { qr_svg, SvgOptions, Shape } from "fast_qr";
 
 export const config = {
