@@ -9,5 +9,10 @@
   },
   "devDependencies": {
     "vercel": "^29.1.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "fast_qr@0.9.0": "patches/fast_qr@0.9.0.patch"
+    }
   }
 }

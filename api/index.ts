@@ -13,6 +13,7 @@ let wasmInitialized = false;
 const initializeWasm = async () => {
   if (!wasmInitialized) {
     await init(wasm);
+    wasmInitialized = true;
   }
 };
 

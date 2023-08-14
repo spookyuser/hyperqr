@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  fast_qr@0.9.0:
+    hash: e62pefyxaly24ehr53nj2zc6pe
+    path: patches/fast_qr@0.9.0.patch
+
 importers:
 
   .:
     dependencies:
       fast_qr:
         specifier: ^0.9.0
-        version: 0.9.0
+        version: 0.9.0(patch_hash=e62pefyxaly24ehr53nj2zc6pe)
       hono:
         specifier: ^3.4.1
         version: 3.4.1
@@ -3544,9 +3549,10 @@ packages:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
 
-  /fast_qr@0.9.0:
+  /fast_qr@0.9.0(patch_hash=e62pefyxaly24ehr53nj2zc6pe):
     resolution: {integrity: sha512-kHDOgZ+7qRw95tWYUPsVGjbQDrPokqSkCkpiUYSt3PUtngoZ70E39pWyfXYaG3YyDWSP2VgMZphC05xtu/s8Pg==}
     dev: false
+    patched: true
 
   /fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}

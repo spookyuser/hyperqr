@@ -1,0 +1,14 @@
+diff --git a/fast_qr.js b/fast_qr.js
+index 05dfe6946033794a929ef50f8c28922e974192d2..40cfd790e1cf2857fbb039db60ea0015ee455527 100644
+--- a/fast_qr.js
++++ b/fast_qr.js
+@@ -400,9 +400,6 @@ function initSync(module) {
+ }
+ 
+ async function init(input) {
+-    if (typeof input === 'undefined') {
+-        input = new URL('fast_qr_bg.wasm', import.meta.url);
+-    }
+     const imports = getImports();
+ 
+     if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
