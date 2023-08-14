@@ -1,6 +1,6 @@
 # [hyperqr.xyz](https://hyperqr.xyz)
 
-This is a simple website where you can get back a .svg with whatever you put after the / in the url. 
+This is a super simple website where you can get back a .svg with whatever you put after the / in the url. 
 
 ## why
 sometimes when i need text from someone elses computer, i dont want to type it out or paste it into a weird website.
