@@ -2,6 +2,8 @@
 import wasm from "fast_qr/fast_qr_bg.wasm?module";
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
+import { home } from "../pages/home";
+import { jsx } from "hono/jsx";
 
 import init, { qr_svg, SvgOptions, Shape } from "fast_qr";
 
@@ -17,6 +19,12 @@ const initializeWasm = async () => {
     wasmInitialized = true;
   }
 };
+
+app.get("/", async (c) => {
+  c.res.headers.set("Cache-Control", "max-age=31536000 smax-age=0 immutable");
+  let page = home();
+  return c.html(page);
+});
 
 app.get("*", async (c) => {
   c.res.headers.set("Cache-Control", "max-age=31536000 smax-age=0 immutable");
