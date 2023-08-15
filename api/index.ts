@@ -19,11 +19,13 @@ const initializeWasm = async () => {
 };
 
 app.get("*", async (c) => {
-  let data = c.req.path.substring(1);
-  await initializeWasm();
-  const qr = qr_svg(data, new SvgOptions().shape(Shape.Square));
   c.res.headers.set("Cache-Control", "max-age=31536000 smax-age=0 immutable");
   c.res.headers.set("Content-Type", "image/svg+xml");
+  c.res.headers.set("Content-Disposition", `inline; filename="qrcode.svg"`);
+
+  await initializeWasm();
+  let data = decodeURIComponent(c.req.path.substring(1));
+  const qr = qr_svg(data, new SvgOptions().shape(Shape.Square));
   if (qr) {
     return c.text(qr);
   }
